@@ -1,0 +1,25 @@
+.wrapper {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.text {
+  /* inherits all typography from parent */
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 1px;
+  /* color, size and glow all come from parent via inheritance */
+  opacity: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .cursor { margin-left: 0; }
+}
+
+/* Ensure long typewriter text wraps cleanly on tiny screens */
+@media (max-width: 375px) {
+  .wrapper { white-space: normal; }
+}

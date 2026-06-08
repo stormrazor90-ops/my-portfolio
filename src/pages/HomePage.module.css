@@ -1,0 +1,940 @@
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* ── Parallax depth orbs ── */
+.parallaxOrb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+  filter: blur(40px);
+}
+
+/* ── Diagonal marquee bands crossing at center ── */
+.marquee {
+  position: absolute;
+  left: 50%;
+  width: 200%;
+  padding: 0.6rem 0;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  background: rgba(255,198,85,0.07);
+  border-top: 1px solid rgba(255,198,85,0.15);
+  border-bottom: 1px solid rgba(255,198,85,0.15);
+  color: rgba(255,198,85,0.55);
+}
+
+.marquee span {
+  display: inline-block;
+  flex-shrink: 0;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+/* Two marquees crossing in an X pattern at center */
+.m1 { 
+  top: 50%;  
+  transform: translate(-50%, -50%) rotate(-12deg);
+}
+.m1 span {
+  animation: marqueeScroll 20s linear infinite;
+}
+
+.m2 { 
+  top: 50%;  
+  transform: translate(-50%, -50%) rotate(12deg);
+}
+.m2 span {
+  animation: marqueeScrollReverse 25s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
+/* ── 3-column layout: name | photo | spacer ── */
+.heroInner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 10rem; /* room for bottom overlays */
+  min-height: 100vh;
+}
+
+/* ── LEFT ── */
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 2rem;
+}
+
+.heroH1 { display: flex; flex-direction: column; gap: 0.05em; margin-bottom: 0.3rem; }
+
+.nameLine {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #F0EAD6;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.6);
+}
+
+.nameGold {
+  color: var(--color-primary);
+  text-shadow: 0 0 40px rgba(255,198,85,0.4), 0 2px 32px rgba(0,0,0,0.6);
+}
+
+/* ── Hero greeting ("Hi, I'm") ── */
+.heroGreeting {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1.1vw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+/* ── Role typewriter line ("I am ...") ── */
+.heroRoleRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255,198,85,0.15);
+  border-radius: 6px;
+  background: rgba(255,198,85,0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.heroRolePrefix {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1.1vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Typewriter text — clean, readable, professional */
+.heroTypewriter {
+  font-family: var(--font-body) !important;
+  font-size: clamp(0.85rem, 1.3vw, 1rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--color-primary) !important;
+  line-height: 1 !important;
+  text-shadow: none !important;
+}
+
+/* ── CENTRE photo — fully blended ── */
+.photoWrap {
+  position: relative;
+  width: clamp(280px, 28vw, 400px);
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* hide system cursor while over the photo */
+  cursor: none;
+}
+
+.photoCard {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  /* Tight vignette — fades edges cleanly into transparent */
+  mask-image: radial-gradient(
+    ellipse 72% 82% at 50% 40%,
+    black 45%,
+    rgba(0,0,0,0.7) 62%,
+    rgba(0,0,0,0.2) 78%,
+    transparent 92%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 72% 82% at 50% 40%,
+    black 45%,
+    rgba(0,0,0,0.7) 62%,
+    rgba(0,0,0,0.2) 78%,
+    transparent 92%
+  );
+  /* screen blend removes the dark/black areas of the image entirely */
+  mix-blend-mode: screen;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+/* ── Lens cursor — organic soft reveal of secondary image ── */
+.lens {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+  z-index: 10;
+  display: none;
+  /* mask will be set via JS using radial-gradient for soft organic edge */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 330px 330px;
+  mask-size: 330px 330px;
+  /* soft feathered blob — not a perfect circle */
+  -webkit-mask-image: radial-gradient(
+    ellipse 55% 60% at 50% 50%,
+    black 28%,
+    rgba(0,0,0,0.85) 42%,
+    rgba(0,0,0,0.5) 58%,
+    rgba(0,0,0,0.15) 74%,
+    transparent 90%
+  );
+  mask-image: radial-gradient(
+    ellipse 55% 60% at 50% 50%,
+    black 28%,
+    rgba(0,0,0,0.85) 42%,
+    rgba(0,0,0,0.5) 58%,
+    rgba(0,0,0,0.15) 74%,
+    transparent 90%
+  );
+  opacity: 0;
+  will-change: mask-position, mask-size, opacity;
+  /* subtle golden glow around the reveal area */
+  filter: drop-shadow(0 0 18px rgba(255,198,85,0.35))
+          drop-shadow(0 0 6px rgba(255,198,85,0.2));
+}
+
+/* ── BOTTOM-LEFT overlay: role + CTA ── */
+.heroBottomLeft {
+  position: absolute;
+  bottom: 7rem;
+  left: var(--pad-x);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.roleText {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+}
+.roleText span {
+  color: var(--color-primary);
+  display: block;
+}
+
+.heroCta {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ── BOTTOM-RIGHT overlay: stats (above WhatsApp ~90px) ── */
+.heroBottomRight {
+  position: absolute;
+  bottom: 9rem;   /* sits above the WhatsApp button */
+  right: var(--pad-x);
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: rgba(8,8,8,0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stat span {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Scroll cue */
+.scrollCue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 3;
+}
+.scrollLine {
+  width: 1px;
+  height: 55px;
+  background: linear-gradient(to bottom, var(--color-primary), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%,100% { opacity:1; transform:scaleY(1); }
+  50%      { opacity:0.3; transform:scaleY(0.5); }
+}
+
+
+/* ══ SERVICES — GSAP-pinned stacking cards ══ */
+
+/*
+  Layout:
+  - .services wraps everything; GSAP pins it and adds scroll room via pinSpacing
+  - .servSticky is the pinned element — 100vh tall, overflow hidden
+  - .servHead is the section title above the stack
+  - .servStack is a position:relative container filling remaining height
+  - Each .servCard is position:absolute, inset:0
+    GSAP animates translateY from 100vh → (index × HEADER_H)px
+    so completed cards have their header visible at the top
+*/
+
+.services {
+  position: relative;
+  border-top: 1px solid var(--color-border);
+}
+
+/* The pinned element — fills full viewport height */
+.servSticky {
+  position: relative;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  perspective: 1200px;
+  perspective-origin: 50% 0%;
+}
+
+/* Section title — fixed height, scrolls within the pinned element */
+.servHead {
+  flex-shrink: 0;
+  z-index: 50;
+  padding: 4rem var(--pad-x) 1.8rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.45) 60%, transparent);
+}
+.servTitle { margin-bottom: 0; }
+
+/* Stack anchor — fills remaining height; cards are absolute inside */
+.servStack {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Individual card — absolute, full area, GSAP moves translateY ── */
+.servCard {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Remove the inline top from sticky approach — not needed */
+  top: 0 !important;
+}
+
+/* Full-width centering shell for the header */
+.servCardHeadWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(8, 7, 4, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Header row — 72px tall, this is the HEADER_H constant in JS */
+.servCardHead {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr auto auto;
+  align-items: center;
+  gap: 1.5rem;
+  height: 72px;
+  width: min(860px, 100%);
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(8, 7, 4, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Full-width centering shell for the body */
+.servCardBodyWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+  background: rgba(6, 5, 2, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.servNum {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+.servName {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  line-height: 1.15;
+}
+
+.servTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.servToolCount {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+}
+
+/* Body — 3 columns: image | deliverables | tools */
+.servCardBody {
+  display: grid;
+  grid-template-columns: 220px 1fr 200px;
+  gap: 0;
+  background: transparent;
+  min-height: 260px;
+  width: min(860px, 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.servImgWrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-right: 1px solid var(--color-border);
+}
+
+.servImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.servCard:hover .servImg { transform: scale(1.04); }
+
+.servImgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6,6,6,0.85) 0%, transparent 55%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.servImgTag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(255,198,85,0.1);
+  border: 1px solid rgba(255,198,85,0.25);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+}
+
+.servDeliverables {
+  padding: 1.6rem 2rem;
+  border-right: 1px solid var(--color-border);
+}
+
+.servBodyLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.servItems {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.servItems li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: color 0.2s ease;
+}
+.servItems li:last-child { border-bottom: none; }
+.servItems li:hover { color: var(--color-text); }
+
+.servBullet {
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.servToolsCol { padding: 1.6rem; }
+
+.servTools {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.servToolPill {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+.servToolPill:last-child { border-bottom: none; }
+.servToolPill:hover { color: var(--color-primary); padding-left: 0.4rem; }
+
+/* ══ WORK — animated hover modal ══ */
+.work {
+  padding-block: clamp(5rem, 10vw, 9rem);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.workHead { margin-bottom: 3rem; }
+.workHeadRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.workTitle { margin-bottom: 0; }
+.viewAll {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  transition: color var(--ease-fast);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.viewAll:hover { color: var(--color-primary); }
+
+/* List — relative so the fixed-position modal anchors correctly */
+.workList {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ── Individual project row ── */
+.workRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2.8rem;
+  border-top: 1px solid var(--color-border);
+  text-decoration: none;
+  cursor: none;
+  transition: opacity 0.2s ease;
+}
+.workRow:last-of-type { border-bottom: 1px solid var(--color-border); }
+.workList:has(.workRow:hover) .workRow:not(:hover) { opacity: 0.4; }
+
+.workRowLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 1.6rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.workNum {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.workName {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease, transform 0.3s ease;
+}
+.workRow:hover .workName {
+  color: var(--color-primary);
+  transform: translateX(8px);
+}
+
+.workRowRight {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.workTech {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  transition: transform 0.3s ease;
+}
+.workRow:hover .workTech { transform: translateX(8px); }
+
+.workCat {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0.7;
+}
+
+.workYear {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.workArrow {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease, transform 0.3s ease;
+}
+.workRow:hover .workArrow {
+  color: var(--color-primary);
+  transform: translate(4px, -4px);
+}
+
+/* ── Floating image modal ── */
+.workModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 240px;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 4px;
+  z-index: 9999;
+  /* transform-origin at center so scale animation works from cursor point */
+  transform-origin: center center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* Sliding strip holds all project images stacked vertically */
+.workModalStrip {
+  position: absolute;
+  width: 100%;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.workModalSlide {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.workModalImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ── Custom cursor dot ── */
+.workCursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  pointer-events: none;
+  z-index: 10000;
+  transform-origin: center center;
+  mix-blend-mode: difference;
+}
+
+/* ── Cursor "View" label ── */
+.workCursorLabel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  pointer-events: none;
+  z-index: 10001;
+  transform-origin: center center;
+}
+
+/* ══ QUOTE ══ */
+.quoteBand { border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background: transparent; padding-block: clamp(4rem, 8vw, 7rem); }
+.quote { max-width: 700px; }
+.quote p { font-family: var(--font-heading); font-size: clamp(1.6rem, 4vw, 3rem); letter-spacing: -0.02em; color: var(--color-text); line-height: 1.1; margin-bottom: 1.2rem; }
+.quote cite { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); }
+
+/* ══ CTA ══ */
+.cta { border-bottom: 1px solid var(--color-border); }
+.ctaInner { max-width: 600px; }
+.ctaH2 { font-family: var(--font-heading); font-size: clamp(2.5rem, 7vw, 6rem); letter-spacing: -0.02em; line-height: 1.05; color: var(--color-text); margin-bottom: 1.5rem; }
+.ctaSub { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 2.5rem; max-width: 420px; }
+
+@media (max-width: 1024px) {
+  .heroInner { grid-template-columns: 1fr auto 1fr; gap: 1.5rem; }
+  /* Services — hide tools column on mid screens */
+  .servCardBody { grid-template-columns: 200px 1fr; width: min(640px, 100%); }
+  .servCardBodyWrap { justify-content: flex-start; }
+  .servToolsCol { display: none; }
+  .servTag { display: none; }
+  .workTech { display: none; }
+}
+
+/* ── 768px ── */
+@media (max-width: 768px) {
+  .heroInner {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+  }
+  .heroBottomLeft { bottom: 6rem; }
+  .heroBottomRight { bottom: 8rem; gap: 1.5rem; padding: 0.9rem 1.2rem; }
+  .stat strong { font-size: clamp(1.2rem, 3.5vw, 1.7rem); }
+}
+
+/* ── 720px  ── */
+@media (max-width: 720px) {
+  .heroInner { grid-template-columns: 1fr; justify-items: center; text-align: center; padding-top: 7rem; padding-bottom: 14rem; }
+  .heroLeft { align-items: center; }
+  .heroRoleRow { margin-left: auto; margin-right: auto; }
+  .photoWrap { width: clamp(220px, 72vw, 340px); }
+  .heroBottomLeft { left: 50%; transform: translateX(-50%); align-items: center; text-align: center; white-space: nowrap; }
+  .heroBottomRight { right: 50%; transform: translateX(50%); }
+  /* Services — single column on mobile */
+  .servCardBody { grid-template-columns: 1fr; width: min(480px, 94vw); }
+  .servCardHead { width: min(480px, 94vw); grid-template-columns: 2.5rem 1fr auto; gap: 0.8rem; height: 68px; }
+  .servImgWrap { display: none; }
+  .servToolsCol { display: none; }
+  .servDeliverables { border-right: none; }
+  .servToolCount { display: none; }
+  .servName { font-size: clamp(1rem, 4.5vw, 1.5rem); }
+  /* Work rows on mobile */
+  .workRowRight { gap: 1rem; }
+  .workCat { display: none; }
+  .workModal, .workCursorDot, .workCursorLabel { display: none; }
+  .workRow { cursor: pointer; }
+}
+
+/* ── 640px ── */
+@media (max-width: 640px) {
+  .heroInner { padding-top: 6.5rem; padding-bottom: 16rem; }
+  .heroBottomLeft { bottom: 7.5rem; gap: 0.9rem; }
+  .heroBottomRight { bottom: 4.5rem; gap: 1.2rem; }
+  .heroCta { gap: 0.6rem; }
+  .workRow { padding-block: 2rem; gap: 1rem; }
+  .workHead { margin-bottom: 2rem; }
+  .ctaH2 { font-size: clamp(2rem, 9vw, 3.5rem); }
+  .ctaSub { font-size: 0.875rem; }
+  .quote p { font-size: clamp(1.4rem, 5.5vw, 2.2rem); }
+}
+
+/* ── 480px ── */
+@media (max-width: 480px) {
+  .heroInner { padding-top: 6rem; padding-bottom: 18rem; gap: 0.5rem; }
+  .photoWrap { width: clamp(200px, 80vw, 300px); }
+  .heroGreeting { font-size: 0.7rem; letter-spacing: 0.22em; }
+  .nameLine { font-size: clamp(2.4rem, 9.5vw, 4rem); }
+  .heroRoleRow { padding: 0.55rem 0.85rem; gap: 0.4rem; }
+  .heroRolePrefix { font-size: 0.7rem; letter-spacing: 0.14em; }
+  .heroTypewriter { font-size: 0.78rem !important; letter-spacing: 0.05em !important; }
+  .heroBottomLeft { bottom: 8.5rem; white-space: normal; width: calc(100% - 2 * var(--pad-x)); }
+  .heroBottomRight { bottom: 5rem; gap: 1rem; }
+  .stat strong { font-size: 1.3rem; }
+  .stat span { font-size: 0.55rem; }
+  /* Services card head tighter */
+  .servCardHead { height: 62px; gap: 0.5rem; padding: 0 1rem; }
+  .servName { font-size: clamp(0.9rem, 4.5vw, 1.3rem); }
+  .servNum { display: none; }
+  /* Work rows */
+  .workNum { display: none; }
+  .workYear { display: none; }
+  .workName { font-size: clamp(1.1rem, 5vw, 1.8rem); }
+  .workArrow { font-size: 1rem; }
+  .workRow { padding-block: 1.6rem; }
+  /* CTA section */
+  .ctaInner { max-width: 100%; }
+  .ctaH2 { font-size: clamp(1.9rem, 9.5vw, 3rem); }
+}
+
+/* ── 375px ── */
+@media (max-width: 375px) {
+  .heroInner { padding-top: 5.5rem; padding-bottom: 20rem; }
+  .photoWrap { width: clamp(180px, 82vw, 260px); }
+  .nameLine { font-size: clamp(2.1rem, 9vw, 3.2rem); }
+  .heroBottomLeft { bottom: 10rem; }
+  .heroBottomRight { bottom: 6rem; padding: 0.7rem 0.9rem; gap: 0.9rem; }
+  .stat strong { font-size: 1.15rem; }
+}
+
+/* ── 320px ── */
+@media (max-width: 320px) {
+  .heroInner { padding-top: 5rem; padding-bottom: 22rem; }
+  .photoWrap { width: 82vw; }
+  .nameLine { font-size: clamp(1.9rem, 9vw, 3rem); }
+  .heroBottomLeft { bottom: 11.5rem; }
+  .heroBottomRight { gap: 0.7rem; padding: 0.6rem 0.8rem; bottom: 7rem; }
+}
+
+/* ── 1280px ── */
+@media (min-width: 1280px) {
+  .servCardBody { grid-template-columns: 240px 1fr 200px; width: min(920px, 100%); }
+  .servCardHead { width: min(920px, 100%); }
+}
+
+/* ── 1536px ── */
+@media (min-width: 1536px) {
+  .servCardBody { grid-template-columns: 280px 1fr 220px; width: min(1080px, 100%); }
+  .servCardHead { width: min(1080px, 100%); }
+  .workName { font-size: clamp(1.8rem, 2.5vw, 3rem); }
+  .heroBottomRight { bottom: 10rem; }
+}
+
+/* ── 1920px ── */
+@media (min-width: 1920px) {
+  .servCardBody { grid-template-columns: 320px 1fr 260px; width: min(1300px, 100%); }
+  .servCardHead { width: min(1300px, 100%); }
+}

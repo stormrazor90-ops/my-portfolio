@@ -1,0 +1,126 @@
+.contact {
+  /* default bg */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.info p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.contactLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contactLinks a {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.contactLinks a:hover {
+  color: var(--color-primary);
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.field input,
+.field textarea {
+  background: rgba(255,198,85,0.03);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-border);
+}
+
+.submitBtn {
+  padding: 0.9rem 2rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #5a52e0;
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.successMsg {
+  color: #4caf50;
+  font-size: 0.9rem;
+}
+
+.errorMsg {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper { gap: 1.5rem; }
+  .submitBtn { width: 100%; align-self: stretch; }
+  .field input, .field textarea { font-size: 0.875rem; }
+}
+
+@media (max-width: 375px) {
+  .field input, .field textarea { padding: 0.65rem 0.8rem; }
+}

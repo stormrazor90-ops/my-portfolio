@@ -1,0 +1,24 @@
+.bg {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.28;
+}
+
+/* Reduce shader opacity on small screens for better readability */
+@media (max-width: 768px) {
+  .bg { opacity: 0.18; }
+}
+
+@media (max-width: 480px) {
+  .bg { opacity: 0.12; }
+}
+
+/* Boost slightly on large/ultrawide screens */
+@media (min-width: 1536px) {
+  .bg { opacity: 0.32; }
+}

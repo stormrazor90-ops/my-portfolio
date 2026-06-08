@@ -1,0 +1,162 @@
+/* ── Reviews Section — shuffle-card testimonials ─────────── */
+
+.section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--section-py);
+}
+
+/* Subtle radial glow */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,198,85,0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  padding-inline: var(--pad-x);
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.title { margin-bottom: 0.8rem; }
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  max-width: 480px;
+  margin-inline: auto;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ── Stage — centred area that holds the deck ───────────── */
+.stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  min-height: 520px;
+  /* extra left padding so the offset cards don't clip on mobile */
+  padding-left: clamp(80px, 20vw, 175px);
+}
+
+/* ── Deck — the 3-card relative container ───────────────── */
+.deck {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  flex-shrink: 0;
+}
+
+/* ── Individual card ─────────────────────────────────────── */
+.card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 450px;
+
+  display: grid;
+  place-content: center;
+  gap: 1.4rem;
+  padding: 1.8rem 1.6rem;
+
+  border-radius: 1rem;
+  border: 1px solid rgba(255,198,85,0.15);
+  background: rgba(14, 12, 6, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(255,198,85,0.06) inset;
+
+  /* framer-motion controls transform; prevent text selection while dragging */
+  user-select: none;
+}
+
+.cardFront {
+  cursor: grab;
+}
+.cardFront:active {
+  cursor: grabbing;
+}
+
+/* ── Card internals ─────────────────────────────────────── */
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,198,85,0.3);
+  object-fit: cover;
+  margin-inline: auto;
+  display: block;
+  pointer-events: none;
+  background: rgba(255,198,85,0.08);
+}
+
+.quote {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  text-align: center;
+  font-style: italic;
+  opacity: 0.88;
+  margin: 0;
+  max-width: 300px;
+}
+
+.author {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.dragHint {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stage { padding-left: clamp(60px, 15vw, 100px); }
+  .deck  { width: 310px; height: 430px; }
+  .card  { width: 310px; height: 430px; }
+}
+
+@media (max-width: 480px) {
+  .stage { padding-left: 50px; min-height: 460px; }
+  .deck  { width: 280px; height: 410px; }
+  .card  { width: 280px; height: 410px; padding: 1.4rem 1.2rem; }
+  .quote { font-size: 0.84rem; }
+  .avatar { width: 80px; height: 80px; }
+}
+
+/* touch — no backdrop-filter for perf */
+@media (hover: none) {
+  .card { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .dragHint { display: none; }
+}

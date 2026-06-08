@@ -1,0 +1,116 @@
+/* ── both layers: fixed, pointer-events none, GPU-accelerated ── */
+.dot,
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  /* start off-screen until first mousemove */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ─────────────────────────────────────────
+   DOT — rotated gold diamond
+   Centered via negative margin so the tip
+   of the diamond sits exactly on the hotspot
+───────────────────────────────────────────── */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  /* rotate(45deg) is applied via JS along with translate */
+  /* offset so center of diamond is at cursor tip */
+  margin-left: -5px;
+  margin-top: -5px;
+  border-radius: 1px;
+  box-shadow:
+    0 0 8px  rgba(255, 198, 85, 0.7),
+    0 0 20px rgba(255, 198, 85, 0.3);
+  transition:
+    width  0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.2s ease,
+    border-radius 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ─────────────────────────────────────────
+   RING — hollow circle, larger + lags behind
+───────────────────────────────────────────── */
+.ring {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid rgba(255, 198, 85, 0.5);
+  border-radius: 50%;
+  margin-left: -19px;
+  margin-top: -19px;
+  transition:
+    width  0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    background   0.25s ease,
+    border-radius 0.25s ease,
+    margin 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─────────────────────────────────────────
+   HOVER STATE — over links / buttons
+───────────────────────────────────────────── */
+.dotHover {
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  margin-top: -3px;
+  background: var(--color-text-dark);
+  box-shadow: none;
+  border-radius: 50%;
+}
+
+.ringHover {
+  width: 52px;
+  height: 52px;
+  margin-left: -26px;
+  margin-top: -26px;
+  border-color: var(--color-primary);
+  border-width: 2px;
+  background: rgba(255, 198, 85, 0.06);
+}
+
+/* ─────────────────────────────────────────
+   CLICK STATE — brief squish
+───────────────────────────────────────────── */
+.dotClick {
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  background: var(--color-cta);
+  border-radius: 2px;
+  box-shadow:
+    0 0 14px rgba(255, 198, 85, 1),
+    0 0 30px rgba(255, 198, 85, 0.5);
+}
+
+.ringClick {
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  margin-top: -14px;
+  border-color: rgba(255, 198, 85, 0.9);
+  background: rgba(255, 198, 85, 0.08);
+}
+
+/* ─────────────────────────────────────────
+   Hide on touch / mobile — no cursor needed
+───────────────────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  .dot, .ring { display: none; }
+}
+
+/* Also hide below 1024px where finger-touch is common even on pointer devices */
+@media (max-width: 1024px) {
+  .dot, .ring { display: none; }
+}
