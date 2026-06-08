@@ -13,7 +13,7 @@ const socials = [
   { label: 'GitHub',    href: 'https://github.com/abdulrahmanamjad' },
   { label: 'LinkedIn',  href: 'https://linkedin.com/in/abdulrahmanamjad' },
   { label: 'WhatsApp',  href: 'https://wa.me/+923061616711' },
-  { label: 'Portfolio', href: 'https://portfolio-jade-five-59.vercel.app/projects' },
+  { label: 'Portfolio', href: 'https://my-portfolio-eight-pi-zjjzrq1jey.vercel.app/' },
 ]
 
 export default function Footer() {

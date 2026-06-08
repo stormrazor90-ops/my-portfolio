@@ -12,7 +12,7 @@ const INFO = [
   { label:'Location', value:'Gujranwala, Pakistan' },
   { label:'Phone',    value:'+92 306 1616711',                  href:'tel:+923061616711' },
   { label:'Email',    value:'abdulrahmanamjad725@gmail.com',    href:'mailto:abdulrahmanamjad725@gmail.com' },
-  { label:'Website',  value:'portfolio-jade-five-59.vercel.app', href:'https://portfolio-jade-five-59.vercel.app/projects' },
+  { label:'Website',  value:'my-portfolio-eight-pi-zjjzrq1jey.vercel.app', href:'https://my-portfolio-eight-pi-zjjzrq1jey.vercel.app/' },
 ]
 
 const SKILLS = [

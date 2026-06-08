@@ -32,7 +32,7 @@ export const PROJECTS_DATA = [
     heroImg:  'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1400&q=80&auto=format&fit=crop',
     color:    '#0d0d0d',
 
-    liveUrl:  'https://portfolio-jade-five-59.vercel.app',
+    liveUrl:  'https://my-portfolio-eight-pi-zjjzrq1jey.vercel.app/',
     repoUrl:  'https://github.com/abdulrahmanamjad',
 
     role:     'Designer & Developer',
@@ -138,7 +138,7 @@ export const PROJECTS_DATA = [
       summary:
         'A fully live, production-grade portfolio deployed on Vercel — serving as both a personal brand and a live demonstration of front-end engineering capability.',
       points: [
-        'Live at portfolio-jade-five-59.vercel.app with zero downtime since launch',
+        'Live at my-portfolio-eight-pi-zjjzrq1jey.vercel.app with zero downtime since launch',
         'Smooth 60 fps animations across desktop, tablet, and mobile',
         'WebGL shader background with adaptive opacity for readability on all screen sizes',
         'Custom cursor, scroll-driven parallax, and stacking service cards all working in sync',
@@ -171,7 +171,7 @@ export const PROJECTS_DATA = [
     heroImg:  'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=80&auto=format&fit=crop',
     color:    '#1a1a2e',
 
-    liveUrl:  '#',   // client's live URL — update when available
+    liveUrl:  'https://blogs-two-rosy.vercel.app/',
     repoUrl:  '#',   // private client repo
 
     role:     'Full-Stack Developer',
