@@ -481,7 +481,7 @@ export default function HomePage() {
         <div className={styles.heroBottomRight}>
           {[
             { n:'4+',  l:'Years Exp.' },
-            { n:'10+', l:'Projects' },
+            { n:'5+',  l:'Projects' },
             { n:'5+',  l:'Stacks' },
           ].map(({ n, l }) => (
             <div key={n} className={`${styles.stat} h-stat`}>

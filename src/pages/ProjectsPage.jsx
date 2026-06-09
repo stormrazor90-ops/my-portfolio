@@ -229,7 +229,7 @@ export default function ProjectsPage() {
             {/* Option B: animated stat counters */}
             <div className={`${styles.statsRow} ph-stats`}>
               {[
-                { to: 6,  label: 'Projects',   suffix: '+' },
+                { to: 5,  label: 'Projects',   suffix: '+' },
                 { to: 4,  label: 'Tech Stacks', suffix: '+' },
                 { to: 2,  label: 'Years Exp.',  suffix: '+' },
               ].map(({ to, label, suffix }) => (

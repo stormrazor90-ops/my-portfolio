@@ -9,7 +9,6 @@
  *  3. Hospital Management System — university project (OOP / Java)
  *  4. Student Management System  — university project (Data Structures)
  *  5. Library Management System  — university project (Database Systems)
- *  6. Smart Management System    — professional work (Riyadh, Saudi Arabia)
  */
 
 export const PROJECTS_DATA = [
@@ -32,8 +31,8 @@ export const PROJECTS_DATA = [
     heroImg:  'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1400&q=80&auto=format&fit=crop',
     color:    '#0d0d0d',
 
-    liveUrl:  'https://my-portfolio-eight-pi-zjjzrq1jey.vercel.app/',
-    repoUrl:  'https://github.com/abdulrahmanamjad',
+    liveUrl:  'https://my-portfolio-six-lime-23.vercel.app/',
+    repoUrl:  'https://github.com/stormrazor90-ops/my-portfolio',
 
     role:     'Designer & Developer',
     duration: '3 Weeks',
@@ -138,7 +137,7 @@ export const PROJECTS_DATA = [
       summary:
         'A fully live, production-grade portfolio deployed on Vercel — serving as both a personal brand and a live demonstration of front-end engineering capability.',
       points: [
-        'Live at my-portfolio-eight-pi-zjjzrq1jey.vercel.app with zero downtime since launch',
+        'Live at my-portfolio-six-lime-23.vercel.app with zero downtime since launch',
         'Smooth 60 fps animations across desktop, tablet, and mobile',
         'WebGL shader background with adaptive opacity for readability on all screen sizes',
         'Custom cursor, scroll-driven parallax, and stacking service cards all working in sync',
@@ -312,7 +311,7 @@ export const PROJECTS_DATA = [
     color:    '#0a1628',
 
     liveUrl:  '#',
-    repoUrl:  'https://github.com/abdulrahmanamjad',
+    repoUrl:  '#',
 
     role:     'Developer (University Project)',
     duration: '4 Weeks',
@@ -447,7 +446,7 @@ export const PROJECTS_DATA = [
     color:    '#0f1923',
 
     liveUrl:  '#',
-    repoUrl:  'https://github.com/abdulrahmanamjad',
+    repoUrl:  '#',
 
     role:     'Developer (University Project)',
     duration: '3 Weeks',
@@ -581,7 +580,7 @@ export const PROJECTS_DATA = [
     color:    '#12100e',
 
     liveUrl:  '#',
-    repoUrl:  'https://github.com/abdulrahmanamjad',
+    repoUrl:  '#',
 
     role:     'Developer (University Project)',
     duration: '3 Weeks',
@@ -697,139 +696,5 @@ export const PROJECTS_DATA = [
     },
   },
 
-
-  /* ═══════════════════════════════════════════════════════════════════
-     6 — SMART MANAGEMENT SYSTEM  (professional · Riyadh)
-  ═══════════════════════════════════════════════════════════════════ */
-  {
-    id:       6,
-    slug:     'smart-management-system',
-    title:    'Smart Management System',
-    subtitle: 'An enterprise-grade management system built for a client in Riyadh, Saudi Arabia — contributing to full-stack feature development in an agile team.',
-    cat:      'Full-Stack',
-    year:     '2025–26',
-    tech:     'React · Spring Boot · PostgreSQL',
-    tags:     ['React', 'Spring Boot', 'Java', 'PostgreSQL', 'REST API', 'Agile'],
-    stack:    ['React', 'Spring Boot', 'Java', 'PostgreSQL', 'REST APIs', 'Git', 'Agile / Scrum'],
-    desc:     'Enterprise management system — contributed feature development, bug fixing, and system improvements as part of an agile team for a Riyadh-based client.',
-    img:      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop',
-    heroImg:  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80&auto=format&fit=crop',
-    color:    '#0c1a10',
-
-    liveUrl:  '#',   // internal enterprise system — not publicly accessible
-    repoUrl:  '#',   // private company repository
-
-    role:     'Software Developer',
-    duration: 'Ongoing (2025–26)',
-    client:   'Enterprise Client — Riyadh, Saudi Arabia',
-    status:   'Active ✓',
-
-    stats: [
-      { n: 'Agile', label: 'Methodology' },
-      { n: 'Team',  label: 'Collaborative' },
-      { n: 'Live',  label: 'Production' },
-    ],
-
-    details: [
-      { label: 'Type',        value: 'Professional Work — Enterprise Client' },
-      { label: 'Client',      value: 'Riyadh, Saudi Arabia (Remote)' },
-      { label: 'Frontend',    value: 'React' },
-      { label: 'Backend',     value: 'Java + Spring Boot' },
-      { label: 'Database',    value: 'PostgreSQL' },
-      { label: 'Methodology', value: 'Agile / Scrum' },
-      { label: 'Role',        value: 'Software Developer' },
-      { label: 'Period',      value: '2025 – 2026' },
-    ],
-
-    images: [
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',
-    ],
-
-    goal: {
-      summary:
-        'Contribute to the development and improvement of an enterprise management system for a Riyadh-based client — working as part of an agile team across the full development lifecycle.',
-      points: [
-        'Develop new features based on client requirements in sprint cycles',
-        'Fix bugs identified in production and staging environments',
-        'Improve system performance and code quality through refactoring',
-        'Collaborate effectively in a remote, cross-timezone team',
-        'Maintain and extend the existing React + Spring Boot architecture',
-      ],
-      stats: [
-        { n: '2+',   label: 'Sprints Completed' },
-        { n: 'Team', label: 'Collaboration' },
-      ],
-    },
-    goalImages: [
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop',
-    ],
-
-    challenges: {
-      summary:
-        'Working on an existing enterprise codebase — understanding established patterns, contributing without breaking existing functionality, and collaborating remotely across time zones.',
-      items: [
-        {
-          title: 'Onboarding a Large Codebase',
-          desc:  'Ramping up on an existing enterprise system required understanding the existing Spring Boot service architecture, React component structure, and PostgreSQL schema before contributing.',
-        },
-        {
-          title: 'Remote Collaboration',
-          desc:  'Working remotely with a team based in Riyadh required clear async communication, well-documented pull requests, and disciplined use of Git branching and code review.',
-        },
-        {
-          title: 'Production-Safe Feature Delivery',
-          desc:  'Features had to be developed and tested against a staging environment before being merged — requiring confidence in the existing test suite and careful backward-compatibility checking.',
-        },
-      ],
-      stats: [
-        { n: 'Active', label: 'Status' },
-        { n: '2026',   label: 'Ongoing' },
-      ],
-    },
-    challengeImages: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80&auto=format&fit=crop',
-    ],
-
-    process: {
-      summary:
-        'Operating in a standard Agile Scrum cycle — sprint planning, daily standups, feature development, code review, and retrospectives.',
-      steps: [
-        { n: '01', title: 'Sprint Planning',      desc: 'Review backlog items with the team, estimate complexity, and commit to a sprint goal. Break features into tasks and assign ownership.' },
-        { n: '02', title: 'Feature Development',  desc: 'Develop assigned features on a feature branch — Spring Boot service + controller on the backend, React components on the frontend.' },
-        { n: '03', title: 'Code Review',           desc: 'Submit pull requests with clear descriptions. Review teammates\' code and address feedback on own PRs before merge.' },
-        { n: '04', title: 'QA & Staging',          desc: 'Test features against the staging environment. Fix any integration issues or bugs found during QA before merging to main.' },
-        { n: '05', title: 'Retrospective',         desc: 'Reflect on what went well and what to improve each sprint. Apply process improvements in subsequent cycles.' },
-      ],
-      stats: [
-        { n: 'Scrum',  label: 'Methodology' },
-        { n: 'Active', label: 'Ongoing' },
-      ],
-    },
-    processImages: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80&auto=format&fit=crop',
-    ],
-
-    result: {
-      summary:
-        'Contributing as a software developer to a live enterprise system in production — gaining real-world agile team experience with a global client while applying the full React + Spring Boot + PostgreSQL stack.',
-      points: [
-        'Contributing features and bug fixes to a live enterprise system in production',
-        'Operating effectively in a remote agile team across international time zones',
-        'Gaining professional experience with the full React + Spring Boot + PostgreSQL stack',
-        'Writing production-quality code subject to peer code review and CI checks',
-        'Ongoing engagement — actively contributing through 2025–2026',
-      ],
-      stats: [
-        { n: 'Active',  label: 'Status' },
-        { n: 'Agile',   label: 'Process' },
-        { n: 'Remote',  label: 'Global Team' },
-      ],
-    },
-  },
 
 ]
