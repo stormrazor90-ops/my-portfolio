@@ -56,7 +56,7 @@ export default function About() {
               <li><span>Email:</span> ahmad@example.com</li>
               <li><span>Available:</span> Freelance &amp; Full-time</li>
             </ul>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className={styles.resumeBtn}>
+            <a href="/AbdulRahman-Resume.pdf" download="AbdulRahman-Resume.pdf" target="_blank" rel="noreferrer" className={styles.resumeBtn}>
               Download CV
             </a>
           </div>
