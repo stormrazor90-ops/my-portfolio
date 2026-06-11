@@ -1,14 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './ContactPage.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// ─── EmailJS config ───────────────────────────────────────────────────────────
+// 1. Sign up free at https://www.emailjs.com
+// 2. Create a service (Gmail) → copy the Service ID below
+// 3. Create an email template → copy the Template ID below
+//    Template variables to map: {{from_name}}, {{from_email}}, {{service}}, {{message}}
+// 4. Copy your Public Key from Account → API Keys
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'   // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'  // e.g. 'template_xyz789'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'   // e.g. 'abcDEFghiJKL123'
+
 const LINKS = [
-  { label:'Email',    value:'abdulrahmanamjad725@gmail.com', href:'mailto:abdulrahmanamjad725@gmail.com' },
+  { label:'Email',    value:'abdulrahmanamjad28@gmail.com', href:'mailto:abdulrahmanamjad28@gmail.com' },
   { label:'WhatsApp', value:'+92 306 1616711',               href:'https://wa.me/+923061616711' },
-  { label:'GitHub',   value:'github.com/abdulrahmanamjad',  href:'https://github.com/abdulrahmanamjad' },
+  { label:'GitHub',   value:'github.com/stormrazor90-ops',  href:'https://github.com/stormrazor90-ops' },
   { label:'Location', value:'Gujranwala, Pakistan',          href:null },
 ]
 
@@ -79,13 +90,30 @@ export default function ContactPage() {
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!form.name || !form.email || !form.message) return
     setStatus('sending')
-    setTimeout(() => {
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name:  form.name,
+          from_email: form.email,
+          service:    form.service || 'Not specified',
+          message:    form.message,
+          reply_to:   form.email,
+        },
+        EMAILJS_PUBLIC_KEY
+      )
       setStatus('sent')
-      setForm({ name:'', email:'', service:'', message:'' })
-    }, 1600)
+      setForm({ name: '', email: '', service: '', message: '' })
+    } catch (err) {
+      console.error('EmailJS error:', err)
+      setStatus('error')
+    }
   }
 
   return (
@@ -195,7 +223,8 @@ export default function ContactPage() {
               <button type="submit" className="btn-primary" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending…' : 'Send Message →'}
               </button>
-              {status === 'sent' && <p className={styles.ok}>✓ Sent! I'll reply within 24 hours.</p>}
+              {status === 'sent'  && <p className={styles.ok}>✓ Sent! I'll reply within 24 hours.</p>}
+              {status === 'error' && <p className={styles.err}>✗ Something went wrong — please email me directly at abdulrahmanamjad28@gmail.com</p>}
             </div>
           </form>
         </div>

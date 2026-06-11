@@ -10,7 +10,7 @@ const pages = [
 ]
 
 const socials = [
-  { label: 'GitHub',    href: 'https://github.com/abdulrahmanamjad' },
+  { label: 'GitHub',    href: 'https://github.com/stormrazor90-ops' },
   { label: 'LinkedIn',  href: 'https://linkedin.com/in/abdulrahmanamjad' },
   { label: 'WhatsApp',  href: 'https://wa.me/+923061616711' },
   { label: 'Portfolio', href: 'https://my-portfolio-six-lime-23.vercel.app/' },

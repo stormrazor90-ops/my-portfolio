@@ -218,6 +218,12 @@ a.linkValue:hover { color: var(--color-primary); }
   font-weight: 600;
 }
 
+.err {
+  font-size: 0.875rem;
+  color: #e53935;
+  font-weight: 600;
+}
+
 /* ══ FAQ ══ */
 .faqSection { border-bottom: 1px solid var(--color-border); }
 

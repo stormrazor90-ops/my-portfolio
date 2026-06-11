@@ -27,18 +27,19 @@ function Counter({ to, suffix = '' }) {
 }
 
 const PROJECTS = PROJECTS_DATA.map(p => ({
-  id:      p.id,
-  slug:    p.slug,
-  title:   p.title,
-  cat:     p.cat,
-  year:    p.year,
-  tags:    p.tags,
-  tech:    p.tech,
-  desc:    p.desc,
-  img:     p.img,
-  color:   p.color,
-  liveUrl: p.liveUrl,
-  repoUrl: p.repoUrl,
+  id:       p.id,
+  slug:     p.slug,
+  title:    p.title,
+  cat:      p.cat,
+  year:     p.year,
+  tags:     p.tags,
+  tech:     p.tech,
+  desc:     p.desc,
+  img:      p.img,
+  hoverImg: p.hoverImg,
+  color:    p.color,
+  liveUrl:  p.liveUrl,
+  repoUrl:  p.repoUrl,
 }))
 
 const FILTERS = ['All', 'Full-Stack', 'Web App', 'Creative']
@@ -338,7 +339,7 @@ export default function ProjectsPage() {
                     style={{ backgroundColor: p.color }}
                   >
                     <img
-                      src={p.img}
+                      src={p.hoverImg || p.img}
                       alt={p.title}
                       className={styles.workModalImg}
                       draggable="false"

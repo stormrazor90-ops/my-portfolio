@@ -33,6 +33,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  'https://my-portfolio-six-lime-23.vercel.app/',
     repoUrl:  'https://github.com/stormrazor90-ops/my-portfolio',
+    hoverImg: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=720&q=90&auto=format&fit=crop',
 
     role:     'Designer & Developer',
     duration: '3 Weeks',
@@ -172,6 +173,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  'https://blogs-two-rosy.vercel.app/',
     repoUrl:  '#',   // private client repo
+    hoverImg: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=720&q=90&auto=format&fit=crop',
 
     role:     'Full-Stack Developer',
     duration: '5 Weeks',
@@ -312,6 +314,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  '#',
     repoUrl:  '#',
+    hoverImg: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=720&q=90&auto=format&fit=crop',
 
     role:     'Developer (University Project)',
     duration: '4 Weeks',
@@ -447,6 +450,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  '#',
     repoUrl:  '#',
+    hoverImg: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=720&q=90&auto=format&fit=crop',
 
     role:     'Developer (University Project)',
     duration: '3 Weeks',
@@ -581,6 +585,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  '#',
     repoUrl:  '#',
+    hoverImg: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=720&q=90&auto=format&fit=crop',
 
     role:     'Developer (University Project)',
     duration: '3 Weeks',

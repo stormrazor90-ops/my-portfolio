@@ -52,8 +52,8 @@ export default function About() {
             </p>
             <ul className={styles.details}>
               <li><span>Name:</span> Abdul Rehman Amjad</li>
-              <li><span>Location:</span> Your City, Country</li>
-              <li><span>Email:</span> ahmad@example.com</li>
+              <li><span>Location:</span> Gujranwala, Pakistan</li>
+              <li><span>Email:</span> abdulrahmanamjad28@gmail.com</li>
               <li><span>Available:</span> Freelance &amp; Full-time</li>
             </ul>
             <a href="/AbdulRahman-Resume.pdf" download="AbdulRahman-Resume.pdf" target="_blank" rel="noreferrer" className={styles.resumeBtn}>

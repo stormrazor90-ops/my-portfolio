@@ -11,7 +11,7 @@ const INFO = [
   { label:'Degree',   value:'BSc Computer Science — GIFT University & Virtual University (2021–2026)' },
   { label:'Location', value:'Gujranwala, Pakistan' },
   { label:'Phone',    value:'+92 306 1616711',                  href:'tel:+923061616711' },
-  { label:'Email',    value:'abdulrahmanamjad725@gmail.com',    href:'mailto:abdulrahmanamjad725@gmail.com' },
+  { label:'Email',    value:'abdulrahmanamjad28@gmail.com',    href:'mailto:abdulrahmanamjad28@gmail.com' },
   { label:'Website',  value:'my-portfolio-six-lime-23.vercel.app', href:'https://my-portfolio-six-lime-23.vercel.app/' },
 ]
 

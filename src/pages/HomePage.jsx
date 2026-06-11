@@ -17,14 +17,15 @@ const modalVariants = {
 }
 
 const PROJECTS = PROJECTS_DATA.map(p => ({
-  id:    p.id,
-  slug:  p.slug,
-  title: p.title,
-  cat:   p.cat,
-  year:  p.year,
-  tech:  p.tech,
-  img:   p.img,
-  color: p.color,
+  id:      p.id,
+  slug:    p.slug,
+  title:   p.title,
+  cat:     p.cat,
+  year:    p.year,
+  tech:    p.tech,
+  img:     p.img,
+  hoverImg: p.hoverImg,
+  color:   p.color,
 }))
 
 const MARQUEE_ITEMS = [
@@ -649,7 +650,7 @@ export default function HomePage() {
                     style={{ backgroundColor: p.color }}
                   >
                     <img
-                      src={p.img}
+                      src={p.hoverImg || p.img}
                       alt={p.title}
                       className={styles.workModalImg}
                       draggable="false"

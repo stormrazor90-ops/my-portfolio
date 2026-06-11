@@ -51,9 +51,9 @@ export default function Contact() {
           <div className={styles.info}>
             <p>I&apos;m open to freelance projects and full-time opportunities. Drop me a message and I&apos;ll get back to you as soon as possible.</p>
             <ul className={styles.contactLinks}>
-              <li>📧 <a href="mailto:ahmad@example.com">ahmad@example.com</a></li>
-              <li>🐙 <a href="https://github.com" target="_blank" rel="noreferrer">github.com/ahmad</a></li>
-              <li>💼 <a href="https://linkedin.com" target="_blank" rel="noreferrer">linkedin.com/in/ahmad</a></li>
+              <li>📧 <a href="mailto:abdulrahmanamjad28@gmail.com">abdulrahmanamjad28@gmail.com</a></li>
+              <li>🐙 <a href="https://github.com/stormrazor90-ops" target="_blank" rel="noreferrer">github.com/stormrazor90-ops</a></li>
+              <li>💼 <a href="https://linkedin.com/in/abdulrahmanamjad" target="_blank" rel="noreferrer">linkedin.com/in/abdulrahmanamjad</a></li>
             </ul>
           </div>
 
