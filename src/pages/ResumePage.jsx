@@ -8,7 +8,7 @@ const NAME = 'AbdulRahman-Resume.pdf'
 const INFO = [
   { label:'Name',     value:'Abdul Rehman Amjad' },
   { label:'Role',     value:'Full-Stack Software Developer' },
-  { label:'Degree',   value:'BSc Computer Science — GIFT University & Virtual University (2021–2026)' },
+  { label:'Degree',   value:'BSc Computer Science — GIFT University, Gujranwala (2021–2026)' },
   { label:'Location', value:'Gujranwala, Pakistan' },
   { label:'Phone',    value:'+92 306 1616711',                  href:'tel:+923061616711' },
   { label:'Email',    value:'abdulrahmanamjad28@gmail.com',    href:'mailto:abdulrahmanamjad28@gmail.com' },

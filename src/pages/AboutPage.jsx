@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 const TIMELINE = [
   { year:'2025–26', role:'Software Developer', place:'Smart Management Systems Co. — Riyadh, Saudi Arabia', desc:'Contributed to full development lifecycle, feature development and system improvements in an agile team environment.' },
   { year:'2024',    role:'Full-Stack Developer', place:'Freelance / Remote', desc:'Built multiple production-grade apps — Hospital MS, Student MS, Library MS, and Blogging Platform — with secure auth, CRUD, and database integration.' },
-  { year:'2021–26', role:'BSc Computer Science', place:'GIFT University & Virtual University — Gujranwala', desc:'Data Communication & Networks, Operating Systems, AI, Machine Learning, Database Systems, Linear Algebra & Calculus.' },
+  { year:'2021–26', role:'BSc Computer Science', place:'GIFT University — Gujranwala', desc:'Data Communication & Networks, Operating Systems, AI, Machine Learning, Database Systems, Linear Algebra & Calculus.' },
 ]
 
 const SKILL_BARS = [

@@ -33,7 +33,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  'https://my-portfolio-six-lime-23.vercel.app/',
     repoUrl:  'https://github.com/stormrazor90-ops/my-portfolio',
-    hoverImg: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=720&q=90&auto=format&fit=crop',
+    hoverImg: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=720&q=90&auto=format&fit=crop',
 
     role:     'Designer & Developer',
     duration: '3 Weeks',
@@ -168,7 +168,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  'https://blogs-two-rosy.vercel.app/',
     repoUrl:  '#',
-    hoverImg: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=720&q=90&auto=format&fit=crop',
+    hoverImg: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=720&q=90&auto=format&fit=crop',
 
     role:     'Full-Stack Developer',
     duration: '5 Weeks',
@@ -324,8 +324,7 @@ export const PROJECTS_DATA = [
       { label: 'Database',   value: 'MySQL + JDBC' },
       { label: 'Pattern',    value: 'MVC Architecture' },
       { label: 'Concepts',   value: 'Inheritance, Polymorphism, Encapsulation, Abstraction' },
-      { label: 'University', value: 'GIFT University / Virtual University' },
-      { label: 'Year',       value: '2024' },
+      { label: 'University', value: 'GIFT University — Gujranwala' },
     ],
 
     images: [
@@ -454,7 +453,7 @@ export const PROJECTS_DATA = [
       { label: 'Structures', value: 'Linked List, Binary Search Tree, Sorting Algorithms' },
       { label: 'Database',   value: 'MySQL + JDBC' },
       { label: 'Complexity', value: 'O(log n) search, O(n log n) sort' },
-      { label: 'University', value: 'GIFT University / Virtual University' },
+      { label: 'University', value: 'GIFT University — Gujranwala' },
       { label: 'Year',       value: '2023' },
     ],
 
@@ -585,7 +584,7 @@ export const PROJECTS_DATA = [
       { label: 'Design',     value: 'ER Diagram → 3NF Normalisation' },
       { label: 'Features',   value: 'Stored Procedures, Triggers, Views' },
       { label: 'Frontend',   value: 'HTML5 + CSS3' },
-      { label: 'University', value: 'GIFT University / Virtual University' },
+      { label: 'University', value: 'GIFT University — Gujranwala' },
       { label: 'Year',       value: '2023' },
     ],
 
