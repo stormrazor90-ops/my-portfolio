@@ -33,7 +33,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  'https://my-portfolio-six-lime-23.vercel.app/',
     repoUrl:  'https://github.com/stormrazor90-ops/my-portfolio',
-    hoverImg: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=720&q=90&auto=format&fit=crop',
+    hoverImg: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=720&q=90&auto=format&fit=crop',
 
     role:     'Designer & Developer',
     duration: '3 Weeks',
@@ -58,9 +58,7 @@ export const PROJECTS_DATA = [
     ],
 
     images: [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1587620962725-abab19836100?w=800&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80&auto=format&fit=crop',
     ],
 
     goal: {
@@ -74,13 +72,12 @@ export const PROJECTS_DATA = [
         'Be fully responsive from mobile to ultrawide displays',
       ],
       stats: [
-        { n: '90+',  label: 'Lighthouse Score' },
-        { n: '6',    label: 'Route Pages' },
+        { n: '90+', label: 'Lighthouse Score' },
+        { n: '6',   label: 'Route Pages' },
       ],
     },
     goalImages: [
-      'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
     ],
 
     challenges: {
@@ -110,28 +107,26 @@ export const PROJECTS_DATA = [
       ],
     },
     challengeImages: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1587620962725-abab19836100?w=600&q=80&auto=format&fit=crop',
     ],
 
     process: {
       summary:
         'Designed and built entirely solo — from Figma wireframes through to a live Vercel deployment in three weeks.',
       steps: [
-        { n: '01', title: 'Design in Figma',      desc: 'Sketched layout, colour system (dark + gold accent), typography scale, and motion principles before writing a single line of code.' },
+        { n: '01', title: 'Design in Figma',       desc: 'Sketched layout, colour system (dark + gold accent), typography scale, and motion principles before writing a single line of code.' },
         { n: '02', title: 'Component Architecture', desc: 'Scaffolded reusable components (Navbar, CustomCursor, ShaderBackground, Typewriter) and set up CSS Modules with a global design-token layer.' },
-        { n: '03', title: 'Animations & 3D',       desc: 'Implemented GSAP ScrollTrigger scroll sequences, Framer Motion page transitions, and the Three.js WebGL shader background.' },
-        { n: '04', title: 'Data & Pages',           desc: 'Built all six route pages (Home, About, Projects, Project Detail, Resume, Contact) with a centralised projectsData.js driving the project sections.' },
-        { n: '05', title: 'QA & Deploy',            desc: 'Ran Lighthouse audits, fixed the GSAP/React DOM conflicts, optimised images, and deployed to Vercel with a custom domain.' },
+        { n: '03', title: 'Animations & 3D',        desc: 'Implemented GSAP ScrollTrigger scroll sequences, Framer Motion page transitions, and the Three.js WebGL shader background.' },
+        { n: '04', title: 'Data & Pages',            desc: 'Built all six route pages (Home, About, Projects, Project Detail, Resume, Contact) with a centralised projectsData.js driving the project sections.' },
+        { n: '05', title: 'QA & Deploy',             desc: 'Ran Lighthouse audits, fixed the GSAP/React DOM conflicts, optimised images, and deployed to Vercel with a custom domain.' },
       ],
       stats: [
-        { n: '3w',  label: 'Timeline' },
+        { n: '3w',   label: 'Timeline' },
         { n: '100%', label: 'Solo Build' },
       ],
     },
     processImages: [
       'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80&auto=format&fit=crop',
     ],
 
     result: {
@@ -172,8 +167,8 @@ export const PROJECTS_DATA = [
     color:    '#1a1a2e',
 
     liveUrl:  'https://blogs-two-rosy.vercel.app/',
-    repoUrl:  '#',   // private client repo
-    hoverImg: 'https://images.unsplash.com/photo-1542435503-956c469947f6?w=720&q=90&auto=format&fit=crop',
+    repoUrl:  '#',
+    hoverImg: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=720&q=90&auto=format&fit=crop',
 
     role:     'Full-Stack Developer',
     duration: '5 Weeks',
@@ -181,26 +176,24 @@ export const PROJECTS_DATA = [
     status:   'Delivered ✓',
 
     stats: [
-      { n: 'CRUD',  label: 'Full CRUD' },
-      { n: 'JWT',   label: 'Auth System' },
-      { n: '5w',    label: 'Delivered In' },
+      { n: 'CRUD', label: 'Full CRUD' },
+      { n: 'JWT',  label: 'Auth System' },
+      { n: '5w',   label: 'Delivered In' },
     ],
 
     details: [
-      { label: 'Type',      value: 'Client Project — Remote' },
-      { label: 'Frontend',  value: 'React + CSS3' },
-      { label: 'Backend',   value: 'Node.js + Express.js' },
-      { label: 'Database',  value: 'MongoDB + Mongoose' },
-      { label: 'Auth',      value: 'JWT (JSON Web Tokens)' },
-      { label: 'Client',    value: 'Remote — Pakistan' },
-      { label: 'Delivery',  value: '5 Weeks' },
-      { label: 'Year',      value: '2024' },
+      { label: 'Type',     value: 'Client Project — Remote' },
+      { label: 'Frontend', value: 'React + CSS3' },
+      { label: 'Backend',  value: 'Node.js + Express.js' },
+      { label: 'Database', value: 'MongoDB + Mongoose' },
+      { label: 'Auth',     value: 'JWT (JSON Web Tokens)' },
+      { label: 'Client',   value: 'Remote — Pakistan' },
+      { label: 'Delivery', value: '5 Weeks' },
+      { label: 'Year',     value: '2024' },
     ],
 
     images: [
-      'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1542435503-956c469947f6?w=800&q=80&auto=format&fit=crop',
     ],
 
     goal: {
@@ -219,7 +212,6 @@ export const PROJECTS_DATA = [
       ],
     },
     goalImages: [
-      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1542435503-956c469947f6?w=600&q=80&auto=format&fit=crop',
     ],
 
@@ -241,17 +233,16 @@ export const PROJECTS_DATA = [
         },
         {
           title: 'Scope Creep Management',
-          desc:  'Mid-project, the client requested additional features (comments section, newsletter subscription). Managed expectations by scoping Phase 2 clearly without delaying the original delivery.',
+          desc:  'Mid-project, the client requested additional features. Managed expectations by scoping Phase 2 clearly without delaying the original delivery.',
         },
       ],
       stats: [
-        { n: '5w',  label: 'Delivered' },
-        { n: '0',   label: 'Missed Deadlines' },
+        { n: '5w', label: 'Delivered' },
+        { n: '0',  label: 'Missed Deadlines' },
       ],
     },
     challengeImages: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
     ],
 
     process: {
@@ -263,7 +254,7 @@ export const PROJECTS_DATA = [
         { n: '03', title: 'JWT Authentication',      desc: 'Implemented register/login endpoints, JWT signing with refresh token rotation, and protected route middleware.' },
         { n: '04', title: 'Frontend — Public Blog',  desc: 'Built the reader-facing blog with post listing, single post view, category filter, and search using React.' },
         { n: '05', title: 'Admin Dashboard',         desc: 'Built the private admin panel with rich-text editor, post management table, category CRUD, and analytics summary.' },
-        { n: '06', title: 'Handoff & Deployment',    desc: 'Deployed backend to a VPS and frontend to a static host. Recorded a walkthrough video for the client explaining how to manage content.' },
+        { n: '06', title: 'Handoff & Deployment',    desc: 'Deployed to Vercel and recorded a walkthrough video for the client explaining how to manage content.' },
       ],
       stats: [
         { n: '6',  label: 'Dev Phases' },
@@ -271,7 +262,6 @@ export const PROJECTS_DATA = [
       ],
     },
     processImages: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80&auto=format&fit=crop',
     ],
 
@@ -328,20 +318,18 @@ export const PROJECTS_DATA = [
     ],
 
     details: [
-      { label: 'Type',        value: 'University Project — OOP Course' },
-      { label: 'Language',    value: 'Java SE' },
-      { label: 'GUI',         value: 'Java Swing' },
-      { label: 'Database',    value: 'MySQL + JDBC' },
-      { label: 'Pattern',     value: 'MVC Architecture' },
-      { label: 'Concepts',    value: 'Inheritance, Polymorphism, Encapsulation, Abstraction' },
-      { label: 'University',  value: 'GIFT University / Virtual University' },
-      { label: 'Year',        value: '2024' },
+      { label: 'Type',       value: 'University Project — OOP Course' },
+      { label: 'Language',   value: 'Java SE' },
+      { label: 'GUI',        value: 'Java Swing' },
+      { label: 'Database',   value: 'MySQL + JDBC' },
+      { label: 'Pattern',    value: 'MVC Architecture' },
+      { label: 'Concepts',   value: 'Inheritance, Polymorphism, Encapsulation, Abstraction' },
+      { label: 'University', value: 'GIFT University / Virtual University' },
+      { label: 'Year',       value: '2024' },
     ],
 
     images: [
-      'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80&auto=format&fit=crop',
     ],
 
     goal: {
@@ -355,12 +343,11 @@ export const PROJECTS_DATA = [
         'Apply all four pillars of OOP across a multi-module system',
       ],
       stats: [
-        { n: '4',    label: 'OOP Pillars Applied' },
-        { n: '4',    label: 'Modules Built' },
+        { n: '4', label: 'OOP Pillars Applied' },
+        { n: '4', label: 'Modules Built' },
       ],
     },
     goalImages: [
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&q=80&auto=format&fit=crop',
     ],
 
@@ -387,18 +374,17 @@ export const PROJECTS_DATA = [
       ],
     },
     challengeImages: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80&auto=format&fit=crop',
     ],
 
     process: {
       summary:
         'Followed an academic development cycle — UML class diagrams first, then schema design, then coding bottom-up from the model layer to the Swing UI.',
       steps: [
-        { n: '01', title: 'UML & Class Diagrams',  desc: 'Designed class hierarchy using UML — Person → Patient/Doctor, with composition for Appointment and Billing. Identified abstract classes and interfaces.' },
-        { n: '02', title: 'Database Schema',        desc: 'Designed and created the MySQL schema: patients, doctors, appointments, and bills tables with proper foreign keys.' },
-        { n: '03', title: 'JDBC Data Layer',        desc: 'Implemented DAO (Data Access Object) classes for each entity, encapsulating all SQL queries and JDBC connection handling.' },
-        { n: '04', title: 'Business Logic Layer',   desc: 'Built service classes for appointment booking (with conflict detection), billing calculation, and patient record management.' },
+        { n: '01', title: 'UML & Class Diagrams',   desc: 'Designed class hierarchy using UML — Person → Patient/Doctor, with composition for Appointment and Billing. Identified abstract classes and interfaces.' },
+        { n: '02', title: 'Database Schema',         desc: 'Designed and created the MySQL schema: patients, doctors, appointments, and bills tables with proper foreign keys.' },
+        { n: '03', title: 'JDBC Data Layer',         desc: 'Implemented DAO classes for each entity, encapsulating all SQL queries and JDBC connection handling.' },
+        { n: '04', title: 'Business Logic Layer',    desc: 'Built service classes for appointment booking (with conflict detection), billing calculation, and patient record management.' },
         { n: '05', title: 'Swing GUI',               desc: 'Designed and wired up the Swing UI — main window with tabbed panels for each module, forms for data entry, and tables for record display.' },
       ],
       stats: [
@@ -407,8 +393,7 @@ export const PROJECTS_DATA = [
       ],
     },
     processImages: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=600&q=80&auto=format&fit=crop',
     ],
 
     result: {
@@ -458,25 +443,23 @@ export const PROJECTS_DATA = [
     status:   'Completed ✓',
 
     stats: [
-      { n: '3+', label: 'Data Structures' },
+      { n: '3+',     label: 'Data Structures' },
       { n: 'O(log n)', label: 'BST Search' },
-      { n: 'CRUD', label: 'Operations' },
+      { n: 'CRUD',   label: 'Operations' },
     ],
 
     details: [
-      { label: 'Type',        value: 'University Project — Data Structures Course' },
-      { label: 'Language',    value: 'Java SE' },
-      { label: 'Structures',  value: 'Linked List, Binary Search Tree, Sorting Algorithms' },
-      { label: 'Database',    value: 'MySQL + JDBC' },
-      { label: 'Complexity',  value: 'O(log n) search, O(n log n) sort' },
-      { label: 'University',  value: 'GIFT University / Virtual University' },
-      { label: 'Year',        value: '2023' },
+      { label: 'Type',       value: 'University Project — Data Structures Course' },
+      { label: 'Language',   value: 'Java SE' },
+      { label: 'Structures', value: 'Linked List, Binary Search Tree, Sorting Algorithms' },
+      { label: 'Database',   value: 'MySQL + JDBC' },
+      { label: 'Complexity', value: 'O(log n) search, O(n log n) sort' },
+      { label: 'University', value: 'GIFT University / Virtual University' },
+      { label: 'Year',       value: '2023' },
     ],
 
     images: [
-      'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&auto=format&fit=crop',
     ],
 
     goal: {
@@ -495,8 +478,7 @@ export const PROJECTS_DATA = [
       ],
     },
     goalImages: [
-      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80&auto=format&fit=crop',
     ],
 
     challenges: {
@@ -522,28 +504,26 @@ export const PROJECTS_DATA = [
       ],
     },
     challengeImages: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80&auto=format&fit=crop',
     ],
 
     process: {
       summary:
         'Built bottom-up: data structures first, then JDBC persistence, then the application logic, then a simple Swing UI for demonstration.',
       steps: [
-        { n: '01', title: 'Pseudocode & Design',    desc: 'Wrote pseudocode for each data structure, drew diagrams of the BST node relationships and linked list traversal before coding.' },
-        { n: '02', title: 'Data Structure Impl.',   desc: 'Implemented SinglyLinkedList<Student>, BinarySearchTree<Student> (keyed on ID), and sorting utilities using generic Java classes.' },
-        { n: '03', title: 'MySQL Schema & JDBC',    desc: 'Designed the students, grades, and courses tables. Wrote DAO classes to load data into the linked list on startup and flush changes on exit.' },
-        { n: '04', title: 'Application Layer',      desc: 'Built search (BST lookup), enrolment, grade entry, and reporting operations on top of the data structures.' },
-        { n: '05', title: 'Benchmarking & Report',  desc: 'Measured and tabulated execution times for each algorithm at three dataset sizes. Wrote the course report with Big-O analysis.' },
+        { n: '01', title: 'Pseudocode & Design',   desc: 'Wrote pseudocode for each data structure, drew diagrams of the BST node relationships and linked list traversal before coding.' },
+        { n: '02', title: 'Data Structure Impl.',  desc: 'Implemented SinglyLinkedList<Student>, BinarySearchTree<Student> (keyed on ID), and sorting utilities using generic Java classes.' },
+        { n: '03', title: 'MySQL Schema & JDBC',   desc: 'Designed the students, grades, and courses tables. Wrote DAO classes to load data into the linked list on startup and flush changes on exit.' },
+        { n: '04', title: 'Application Layer',     desc: 'Built search (BST lookup), enrolment, grade entry, and reporting operations on top of the data structures.' },
+        { n: '05', title: 'Benchmarking & Report', desc: 'Measured and tabulated execution times for each algorithm at three dataset sizes. Wrote the course report with Big-O analysis.' },
       ],
       stats: [
-        { n: '3w',  label: 'Build Time' },
-        { n: '5',   label: 'Phases' },
+        { n: '3w', label: 'Build Time' },
+        { n: '5',  label: 'Phases' },
       ],
     },
     processImages: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80&auto=format&fit=crop',
     ],
 
     result: {
@@ -557,8 +537,8 @@ export const PROJECTS_DATA = [
         'All source code and UML diagrams submitted with project',
       ],
       stats: [
-        { n: 'A',      label: 'Grade' },
-        { n: '3',      label: 'DSA Implemented' },
+        { n: 'A',       label: 'Grade' },
+        { n: '3',       label: 'DSA Implemented' },
         { n: 'O(log n)', label: 'Search Complexity' },
       ],
     },
@@ -585,7 +565,7 @@ export const PROJECTS_DATA = [
 
     liveUrl:  '#',
     repoUrl:  '#',
-    hoverImg: 'https://images.unsplash.com/photo-1568667256549-094345857652?w=720&q=90&auto=format&fit=crop',
+    hoverImg: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=720&q=90&auto=format&fit=crop',
 
     role:     'Developer (University Project)',
     duration: '3 Weeks',
@@ -610,9 +590,7 @@ export const PROJECTS_DATA = [
     ],
 
     images: [
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80&auto=format&fit=crop',
     ],
 
     goal: {
@@ -632,13 +610,12 @@ export const PROJECTS_DATA = [
       ],
     },
     goalImages: [
-      'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&q=80&auto=format&fit=crop',
     ],
 
     challenges: {
       summary:
-        'The primary challenge was designing a schema that was both fully normalised and efficient for the application\'s query patterns, then implementing business logic at the database level using stored procedures and triggers.',
+        'The primary challenge was designing a schema that was both fully normalised and efficient, then implementing business logic at the database level using stored procedures and triggers.',
       items: [
         {
           title: '3NF Normalisation',
@@ -659,19 +636,18 @@ export const PROJECTS_DATA = [
       ],
     },
     challengeImages: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1568667256549-094345857652?w=600&q=80&auto=format&fit=crop',
     ],
 
     process: {
       summary:
         'Database-design-first approach: ER diagram → normalisation → DDL → stored procedures → PHP application layer → HTML/CSS frontend.',
       steps: [
-        { n: '01', title: 'ER Diagram',           desc: 'Drew the entity-relationship diagram covering books, members, copies, loans, and fines with all cardinalities.' },
-        { n: '02', title: 'Normalisation',         desc: 'Applied 1NF, 2NF, and 3NF rules to eliminate redundancy and transitive dependencies. Documented each normalisation step.' },
-        { n: '03', title: 'DDL & Seed Data',       desc: 'Wrote CREATE TABLE statements with constraints, indexes, and foreign keys. Generated seed data for 50 books and 20 members.' },
-        { n: '04', title: 'Stored Procs & Triggers', desc: 'Implemented stored procedures for borrow/return operations and a trigger for automatic fine accumulation on overdue loans.' },
-        { n: '05', title: 'PHP Application',       desc: 'Built the web interface in PHP using PDO prepared statements throughout for SQL injection prevention.' },
+        { n: '01', title: 'ER Diagram',              desc: 'Drew the entity-relationship diagram covering books, members, copies, loans, and fines with all cardinalities.' },
+        { n: '02', title: 'Normalisation',            desc: 'Applied 1NF, 2NF, and 3NF rules to eliminate redundancy and transitive dependencies. Documented each normalisation step.' },
+        { n: '03', title: 'DDL & Seed Data',          desc: 'Wrote CREATE TABLE statements with constraints, indexes, and foreign keys. Generated seed data for 50 books and 20 members.' },
+        { n: '04', title: 'Stored Procs & Triggers',  desc: 'Implemented stored procedures for borrow/return operations and a trigger for automatic fine accumulation on overdue loans.' },
+        { n: '05', title: 'PHP Application',          desc: 'Built the web interface in PHP using PDO prepared statements throughout for SQL injection prevention.' },
       ],
       stats: [
         { n: '3w',  label: 'Build Time' },
@@ -679,8 +655,7 @@ export const PROJECTS_DATA = [
       ],
     },
     processImages: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80&auto=format&fit=crop',
     ],
 
     result: {
@@ -700,6 +675,5 @@ export const PROJECTS_DATA = [
       ],
     },
   },
-
 
 ]
