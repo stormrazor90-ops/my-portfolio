@@ -34,7 +34,20 @@ const TOOLS = [
   'Terminal','Slack','MongoDB',
 ]
 
-const VALUES = [
+const CERTS = [
+  {
+    img:    '/cert-red-crescent.jpg',
+    title:  'Pakistan Red Crescent Society',
+    issuer: 'PRCS — Community Service',
+    desc:   'Recognised for volunteer and community service contributions with the Pakistan Red Crescent Society.',
+  },
+  {
+    img:    '/cert-starfest.jpg',
+    title:  'Starfest Achievement',
+    issuer: 'Starfest — Event / Competition',
+    desc:   'Certificate of achievement awarded at Starfest — recognising outstanding performance and participation.',
+  },
+]
   { n:'01', title:'Clean Code',        desc:'Readable, maintainable code is a product feature, not a luxury.' },
   { n:'02', title:'User-Centered',     desc:'Every decision is filtered through the user experience lens.' },
   { n:'03', title:'Detail-Oriented',   desc:'Spacing, timing, contrast — the small things make everything better.' },
@@ -49,6 +62,7 @@ export default function AboutPage() {
   const lensRef      = useRef(null)
   const tlRef        = useRef(null)
   const skillsRef    = useRef(null)
+  const certsRef     = useRef(null)
   const valRef       = useRef(null)
 
   useEffect(() => {
@@ -206,6 +220,17 @@ export default function AboutPage() {
         )
       })
     }, skillsRef)
+    return () => ctx.revert()
+  }, [])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.cert-card',
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power3.out',
+          scrollTrigger: { trigger: certsRef.current, start: 'top 80%' } }
+      )
+    }, certsRef)
     return () => ctx.revert()
   }, [])
 
@@ -379,6 +404,37 @@ export default function AboutPage() {
           <ul className={styles.tools}>
             {TOOLS.map(t => <li key={t}>{t}</li>)}
           </ul>
+        </div>
+      </section>
+
+      {/* ══ CERTIFICATIONS & ACHIEVEMENTS ══ */}
+      <section ref={certsRef} className={`section ${styles.certsSection}`}>
+        <div className="container">
+          <span className="label">Recognition</span>
+          <h2 className="section-title">Certifications &amp; <span className="highlight">Achievements.</span></h2>
+          <span className="gold-line" />
+
+          <div className={styles.certsGrid}>
+            {CERTS.map(({ img, title, issuer, desc }) => (
+              <div key={title} className={`${styles.certCard} cert-card`}>
+                <div className={styles.certImgWrap}>
+                  <img
+                    src={img}
+                    alt={title}
+                    className={styles.certImg}
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <div className={styles.certImgOverlay} />
+                </div>
+                <div className={styles.certBody}>
+                  <p className={styles.certIssuer}>{issuer}</p>
+                  <h3 className={styles.certTitle}>{title}</h3>
+                  <p className={styles.certDesc}>{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
