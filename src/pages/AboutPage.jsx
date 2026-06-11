@@ -48,6 +48,8 @@ const CERTS = [
     desc:   'Certificate of achievement awarded at Starfest — recognising outstanding performance and participation.',
   },
 ]
+
+const VALUES = [
   { n:'01', title:'Clean Code',        desc:'Readable, maintainable code is a product feature, not a luxury.' },
   { n:'02', title:'User-Centered',     desc:'Every decision is filtered through the user experience lens.' },
   { n:'03', title:'Detail-Oriented',   desc:'Spacing, timing, contrast — the small things make everything better.' },
