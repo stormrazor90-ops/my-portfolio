@@ -435,7 +435,9 @@ export default function ProjectsPage() {
                     <span className={styles.projYear}>{p.year}</span>
                     <div className={styles.projLinks}>
                       <Link to={`/projects/${p.slug}`} onClick={e => e.stopPropagation()}>Detail →</Link>
-                      <a href={p.liveUrl} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}>Live ↗</a>
+                      {p.liveUrl !== '#' && (
+                        <a href={p.liveUrl} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}>Live ↗</a>
+                      )}
                     </div>
                   </motion.div>
                 ))}
